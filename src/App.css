@@ -1,0 +1,9 @@
+
+  
+.popup-styling{
+    display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding-right: 21px !important;
+  }
+  

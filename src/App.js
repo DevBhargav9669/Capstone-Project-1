@@ -1,9 +1,7 @@
 import HomePage from './components/homePage/homePage';
 import { Routes, Route } from 'react-router-dom';
-import  {MyQuizzes}  from "./Components/homePage/MyQuizzes.js";
+import  {MyQuizzes}  from "./components/homePage/MyQuizzes.js";
 
-
-function App() {
   return (
     function App() {
       return (
@@ -15,6 +13,5 @@ function App() {
     }
     
   );
-}
 
 export default App;

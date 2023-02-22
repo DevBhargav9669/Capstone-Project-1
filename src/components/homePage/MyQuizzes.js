@@ -4,6 +4,7 @@ import { Quizzes } from "./Quizzes";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteQuiz } from "../Redux/Actions";
 import { motion } from "framer-motion";
+import {DeletePopup} from "./components/DeletePopup";
 
 // this is the logic of the model to be displayed for deleting the entire quiz we hve made //
 
@@ -96,4 +97,33 @@ export const MyQuizzes = () => {
       </motion.div>
     </>
   );
+
+  function MyComponent(props) {
+    const [showConfirmation, setShowConfirmation] = useState(false);
+  
+    function handleDeleteClick() {
+      setShowConfirmation(true);
+    }
+  
+    function handleConfirmDelete() {
+      // handle the delete logic here
+      setShowConfirmation(false);
+    }
+  
+    function handleCancelDelete() {
+      setShowConfirmation(false);
+    }
+  
+    return (
+      <div>
+        <button onClick={handleDeleteClick}>Delete</button>
+        {showConfirmation && (
+          <DeletePopup
+            onConfirm={handleConfirmDelete}
+            onCancel={handleCancelDelete}
+          />
+        )}
+      </div>
+    );
+  }
 };

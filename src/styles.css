@@ -1,0 +1,32 @@
+
+
+.body{
+    text-align: center;
+    margin-top: 15vh;
+}
+
+#fieldone{
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+legend{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 22px 20px ;
+    margin: 10px 2px;
+    box-sizing: border-box;
+  }
+  :placeholder-shown{
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+
+  label{
+    font-size: larger;
+  }

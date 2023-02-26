@@ -22,8 +22,8 @@ function QuizFormMui(){
                     
                     <Grid xs={12} item>
                         <TextField
-                         label="Quiz Category"
-                         placeholder="Enter the Quiz Category"
+                         label="Quiz Name"
+                         placeholder="Enter the Quiz Name"
                          variant="outlined"
                         id="category"
                         value={category}

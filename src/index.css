@@ -11,9 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- Button{
-  margin :3;
-  columns: 2;
-  font-style: italic;
-  padding: 3;
-}

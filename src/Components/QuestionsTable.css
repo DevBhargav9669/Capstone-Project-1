@@ -1,0 +1,58 @@
+.quizHeader{
+    width: 80%;
+    margin: 30px auto 30px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.quizHeader > button{
+    background-color: rgb(74, 87, 192);
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid rgb(74, 87, 192);
+}
+.questionsContainer{
+    width: 80%;
+    background-color: white;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+.questionsContainer > div{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-between;
+}
+.questionsHeader{
+    /* display: flex; */
+    /* padding: 5px 10px; */
+    /* justify-content: space-between; */
+    border-bottom: 1px solid rgb(82, 82, 205);
+}
+.questionsHeader > div, .questionsEle > div{
+    width: 150px;
+    flex-grow: 1;
+}
+.questionsHeader > div:nth-child(2), .questionsEle > div:nth-child(2){
+    flex-grow: 2;
+}
+/* .questionsEle{
+    display: flex;
+} */
+.questionsEleTooglePar{
+    display: "inline-block";
+    position: "relative";
+    width: "50px";
+    height: "24px";
+    border-radius: "12px";
+    
+}
+.questionsEleToogleChild{
+    position: "absolute";
+    top: "2px";
+    width: "20px";
+    height: "20px";
+    border-radius: "50%";
+    /* background: "white"; */
+    transition: "0.2s";
+}

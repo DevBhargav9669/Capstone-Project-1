@@ -1,11 +1,15 @@
+.App {
+  text-align: center;
+}
+
 .main{
   text-align: center;
-  justify-content: center;
-  display: flex;
-  padding: 90px 0 90px 0;
-  background-color: rgb(224, 218, 218);
-}
-.sub-main{
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: rgb(224, 218, 218);
+  }
+.sign-container{
   display: flex;
   justify-content: center;
   height: 550px;
@@ -14,27 +18,25 @@
   padding-top: 30px;
   border-radius: 50px;
   background-color: white;
-}
-.imgs{
-  padding-top: 20px;
-  justify-content: center;
-  display: flex;
-}
-.container-image{
-   background-color: blueviolet; 
-  color: rgb(228, 195, 64);
-  border-radius: 150px;
-  align-items: center;
-  display: flex;
-  height: 115px;
-  width: 115px;
-  justify-content: center;
 
 }
-.profile{
-  height: 100px;
-  width: 100px;
-  border-radius: 130px;
+.small-profile{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  padding: 14px 0 0 25px;
+}
+.name{
+  padding-left:70px;
+  font-size: 20px;
+}
+.email{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  padding: 14px 0 0 25px;
+  padding-top: 20px;
+
 }
 input{
   width: 300px;
@@ -44,35 +46,29 @@ input{
    border: none; 
   outline:none;
   background-color:#fff;
-  
-}
-.email{
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  padding: 14px 0 0 25px;
-}
-.name{
-  padding-left:70px;
-  font-size: 20px;
-
 }
 .second-input{
+  padding-top: 20px;
+}
+.third-input{
+  padding-top: 20px;
+}
+.first-input{
   padding-top: 20px;
 }
 button{
   width: 380px;
   height: 50px;
   border-radius: 60px;
-  background-color: blueviolet;
+  background-color: greenyellow;
   color: white;
   font-size: 25px;
   border: none;
 }
-.login-button{
-  padding-top:15px;
+.signup-button{
+  padding-top: 20px;
 }
-.link{
+.link1{
   font-size: 25px;
   font-weight: 400;
 }

@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, TextField, Typography,Button } from "@mui/material";
+import { Card, CardContent, Grid, TextField, Typography,Button,Box } from "@mui/material";
 import { spacing } from "@mui/system";
 import React, { useState } from "react";
 import AddQuizMui from "./AddQuizMui";
@@ -14,12 +14,28 @@ function QuizFormMui(){
   }
     return(
         <>
-        <fieldset style={{marginTop:'15vh'}}>
-            <legend style={{marginLeft:'30px',marginRight:'30px'}}>Create Quiz</legend>
+         <fieldset style={{marginTop:'10vh',backgroundColor:'lightgray'}}>
+         <legend style={{marginLeft:'30px',marginRight:'30px'}}>Create Quiz</legend>
 
-                <CardContent>
-                    <Grid container spacing={1}>
-                    
+            <Box  sx={{
+                                            width: 800,
+                                            height: 200,
+                                            marginLeft:'36vh',
+                                            marginRight:'33vh',
+                                            border:'solid black',
+                                            paddingTop:'8px',
+                                            paddingLeft:'4px',
+                                            paddingRight:'4px',
+                                            backgroundColor: "#fafafa",
+                                            '&:hover': {
+                                            backgroundColor: '#eeeeee',
+                                            opacity: [0.9, 0.9, 1],
+                                            },
+                                
+                                        
+                                        }}>
+          
+          <Grid container spacing={1}>                 
                     <Grid xs={12} item>
                         <TextField
                          label="Quiz Name"
@@ -33,6 +49,7 @@ function QuizFormMui(){
 
                       
                     </Grid>
+                  
                     <Grid xs={12} item>
                         <TextField
                         multiline rows={4}
@@ -44,12 +61,13 @@ function QuizFormMui(){
                         onChange={(event)=>setDescription(event.target.value)}
                          fullWidth required/>    
                     </Grid>
-              
-                    <Final/>
-                    </Grid>           
-                </CardContent>
-
-        </fieldset>
+              </Grid>
+                    
+                           
+                    {/* </fieldset> */}
+                    </Box>
+                 <Final/>
+                 </fieldset>
         </>
     )
 }

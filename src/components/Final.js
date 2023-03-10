@@ -2,10 +2,11 @@ import { Button, CardContent, Grid, TextField, useScrollTrigger } from "@mui/mat
 import { hover } from "@testing-library/user-event/dist/hover";
 import React, { useEffect, useState } from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Box } from "@mui/system";
 
 function Final() {
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
     const [formfields, setFormFields] = useState([
         {
             question: "",
@@ -22,6 +23,8 @@ function Final() {
         setFormFields(data);
     }
     const addFields = () => {
+    
+
         let newField = {
             question: "",
             answerone: "",
@@ -30,7 +33,7 @@ function Final() {
             answerfour: ""
         }
         setFormFields([...formfields, newField])
-
+        
     }
     const submit = (e) => {
         e.preventDefault();
@@ -45,8 +48,11 @@ function Final() {
     }
     return (
         <>
+
+
             <form autoComplete="off" onSubmit={submit}>
-                
+      
+
             
                 {formfields.map((input, index) => {
                     return (
@@ -54,7 +60,24 @@ function Final() {
                         <div key={index}>
                             <h1>Question</h1>
                             <CardContent>
+                                <Box  sx={{
+                                            width: 800,
+                                            height: 250,
+                                            marginLeft:'33vh',
+                                            marginRight:'33vh',
+                                            border:'solid black',
+                                            paddingTop:'8px',
+                                            paddingLeft:'4px',
+                                            paddingRight:'4px',
+                                            backgroundColor: "#fafafa",
+                                            '&:hover': {
+                                            backgroundColor: '#eeeeee',
+                                            opacity: [0.9, 0.9, 1],
+                                            },
+                                        }}
+                                        >
                                 <Grid container spacing={1}>
+                              
                                     <Grid xs={12} item>
                                         <TextField
                                             label="Enter the Question"
@@ -116,21 +139,29 @@ function Final() {
 
 
                                 </Grid>
-                                <br />
-                                <br />
+                                <br/>
 
+                                <Box justifyContent="space-around" display="flex">
                                 <Button variant="contained" color="primary" onClick={addFields}>Add Question</Button>
-                                <br />
-                                <br />
+                               
+                                
+                      
                                 <Button variant="contained" color="primary" onClick={removeFields}><DeleteIcon />  Delete Question</Button>
+                                </Box>
+                                </Box>
                                 <br />
 
                             </CardContent>
                         </div>
                     )
                 })}
-                <Button variant="contained" type="submit" color="primary" size="large" onClick={submit}>Submit</Button>
+        
+                     <Box justifyContent="center" display="flex" >
+                <Button variant="contained" type="submit" color="primary" size="large"  onClick={submit}>Submit</Button>
+                </Box>
+       
             </form>
+        
         </>
     )
 }
